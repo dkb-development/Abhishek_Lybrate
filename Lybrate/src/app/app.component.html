@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Lybrate</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search emails here" aria-label="Search" [(ngModel)]="searchEmail" name="searchEmail">
+    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+  </form>
+</nav>
+
+
+
+<div class="my-row">
+  <div *ngFor="let emp of emp_list | FilterEmailPipe : searchEmail"  class="card my-col m-1" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">
+        <img class="rounded-circle" src={{emp.avatar}} style="max-width: 60px;">
+        First Name</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {{emp.first_name}} {{emp.last_name}}
+      </h6>
+      <p class="card-text"></p>
+      <a href="#" class="card-link">{{emp.email}}</a>
+    </div>
+  </div>
+</div>
+
+

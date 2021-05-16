@@ -1,0 +1,36 @@
+.my-row{
+    width: 100vw;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
+.my-col{
+    width: 20%;
+    /* flex: 21%; */
+    padding: 20px;
+    margin: auto;
+}
+
+/* Desktop */
+@media screen and (max-width: 1440px) {
+    .column {
+      width: 25%;
+    }
+}
+
+/* iPad */
+@media screen and (max-width: 1024px) {
+    .column {
+      width: 50%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+    .column {
+      flex: 100%;
+    }
+}
